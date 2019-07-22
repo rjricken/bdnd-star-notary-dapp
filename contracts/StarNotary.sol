@@ -31,7 +31,7 @@ contract StarNotary is ERC721, ERC721Metadata {
     }
 
     function buyStar(uint256 _tokenId) public  payable {
-        require(starsForSale[_tokenId] > 0, "The Star should be up for sale");
+        require(starsForSale[_tokenId] > 0, "The star should be up for sale");
 
         uint256 starCost = starsForSale[_tokenId];
         address ownerAddress = ownerOf(_tokenId);
